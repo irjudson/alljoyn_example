@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.allseen.alljoyn" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>AllJoynExample</name>
+    <description>
+        A sample Apache Cordova application that shows AllJoyn functionality.
+    </description>
+    <author email="dx_dev@microsoft.com" href="http://microsoft.com">
+        Microsoft Developer Experiences Strategic Engagements Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon src="www/img/AllJoynLogoSplash.png" />
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+	<hook type="before_build" src="scripts/update-plugins.sh" />
+</widget>
