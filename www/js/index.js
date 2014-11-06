@@ -49,7 +49,10 @@ var app = {
         console.log('Received Event: ' + id);
     },
     alljoynDiscoverStart: function() {
-        allseen.alljoyn.hello(function (msg) {console.log(msg)}, "cordova!");
+        allseen.alljoyn.hello(function (msg) {
+            console.log(msg);
+            navigator.notification.alert(msg);
+        }, "AllJoyn + Cordova!");
     },
     alljoynDiscoverStop: function() {
         var element = document.getElementById('allJoynDevices');

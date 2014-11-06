@@ -13,5 +13,4 @@
     <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
     </feature>
-	<hook type="before_build" src="scripts/update-plugins.sh" />
 </widget>

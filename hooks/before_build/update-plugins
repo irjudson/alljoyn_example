@@ -6,6 +6,7 @@
 // the identifier, the filesystem location 
 // or the URL
 var pluginlist = [
+	"org.apache.cordova.dialogs",
     "https://github.com/irjudson/cordova-plugin-alljoyn.git"
 ];
  
