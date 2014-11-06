@@ -49,10 +49,16 @@ var app = {
         console.log('Received Event: ' + id);
     },
     alljoynDiscoverStart: function() {
-        allseen.alljoyn.hello(function (msg) {
-            console.log(msg);
-            navigator.notification.alert(msg);
-        }, "AllJoyn + Cordova!");
+        allseen.alljoyn.hello("AllJoyn + Cordova!",
+            function (msg) {
+                console.log(msg);
+                navigator.notification.alert(msg);
+            }, 
+            function (error) {
+                console.log(error);
+                navigator.notification.alert(error);
+            }
+        );
     },
     alljoynDiscoverStop: function() {
         var element = document.getElementById('allJoynDevices');
