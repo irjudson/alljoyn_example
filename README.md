@@ -14,5 +14,7 @@ To Build (for android)
 ----------------------
 
 cordova platform add android (and it's requisite bits)
+cordova plugin add https://github.com/irjudson/cordova-plugin-alljoyn.git
+cordova plugin add org.apache.cordova.dialogs
 cordova build 
 cordova run

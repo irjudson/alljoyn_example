@@ -49,7 +49,7 @@ var app = {
         console.log('Received Event: ' + id);
     },
     alljoynDiscoverStart: function() {
-        allseen.alljoyn.hello("AllJoyn + Cordova!",
+        allseen.alljoyn.discover(
             function (msg) {
                 console.log(msg);
                 navigator.notification.alert(msg);
