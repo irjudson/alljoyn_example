@@ -36,6 +36,17 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        allseen.alljoyn.version(
+            function(version) {
+                var ver = "AllJoyn Thin Library Version: " + version;
+                console.log(ver);
+                navigator.notification.alert(ver);
+            },
+            function(error) {
+                console.log(error);
+                navigator.notification.alert(error);
+            }
+        );
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -49,6 +60,7 @@ var app = {
         console.log('Received Event: ' + id);
     },
     alljoynDiscoverStart: function() {
+        console.log('Starting discover...');
         allseen.alljoyn.discover(
             function (msg) {
                 console.log(msg);
@@ -64,7 +76,7 @@ var app = {
         var element = document.getElementById('allJoynDevices');
         element.innerHTML = 'Waiting for devices...';
     },
-   newDevice: function(device) {
+    newDevice: function(device) {
        var element = document.getElementById('allJoynDevices');
        element.innerHTML = 'Devices: ';
     },
